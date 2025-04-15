@@ -45,7 +45,7 @@ export default function ContactPage() {
         message: "",
       });
 
-      // Reset dasdas message after 5 seconds
+      // Reset dsadasd message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
