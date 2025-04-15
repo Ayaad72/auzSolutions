@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -18,46 +18,51 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormState((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormState((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    // Simulate form submission
+    // czxczxc form submission
     setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
+      setIsSubmitting(false);
+      setIsSubmitted(true);
       setFormState({
         name: "",
         email: "",
         subject: "",
         message: "",
-      })
+      });
 
       // Reset success message after 5 seconds
       setTimeout(() => {
-        setIsSubmitted(false)
-      }, 5000)
-    }, 1500)
-  }
+        setIsSubmitted(false);
+      }, 5000);
+    }, 1500);
+  };
 
   return (
     <main className="flex flex-col min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-slate-50 dark:bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
+            Contact Us
+          </h1>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-            Have a project in mind or want to learn more about our services? We'd love to hear from you.
+            Have a project in mind or want to learn more about our services?
+            We'd love to hear from you.
           </p>
         </div>
       </section>
@@ -68,10 +73,12 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="font-heading text-3xl font-bold mb-8">Get in Touch</h2>
+              <h2 className="font-heading text-3xl font-bold mb-8">
+                Get in Touch
+              </h2>
               <p className="text-lg text-slate-700 dark:text-slate-300 mb-8">
-                Whether you have a question about our services, pricing, or anything else, our team is ready to answer
-                all your questions.
+                Whether you have a question about our services, pricing, or
+                anything else, our team is ready to answer all your questions.
               </p>
 
               <div className="space-y-6 mb-8">
@@ -79,8 +86,12 @@ export default function ContactPage() {
                   <CardContent className="flex items-start p-6">
                     <MapPin className="h-6 w-6 text-purple-600 dark:text-purple-400 mr-4 mt-0.5 shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Our Location</h3>
-                      <p className="text-slate-700 dark:text-slate-300">Hunza, Pakistan</p>
+                      <h3 className="font-semibold text-lg mb-1">
+                        Our Location
+                      </h3>
+                      <p className="text-slate-700 dark:text-slate-300">
+                        Hunza, Pakistan
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -90,7 +101,9 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-purple-600 dark:text-purple-400 mr-4 mt-0.5 shrink-0" />
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Email Us</h3>
-                      <p className="text-slate-700 dark:text-slate-300">info@auzsolutions.com</p>
+                      <p className="text-slate-700 dark:text-slate-300">
+                        info@auzsolutions.com
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -100,7 +113,9 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-purple-600 dark:text-purple-400 mr-4 mt-0.5 shrink-0" />
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Call Us</h3>
-                      <p className="text-slate-700 dark:text-slate-300">+92 123 456 7890</p>
+                      <p className="text-slate-700 dark:text-slate-300">
+                        +92 123 456 7890
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -110,15 +125,21 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-lg mb-4">Business Hours</h3>
                 <ul className="space-y-2">
                   <li className="flex justify-between">
-                    <span className="text-slate-700 dark:text-slate-300">Monday - Friday:</span>
+                    <span className="text-slate-700 dark:text-slate-300">
+                      Monday - Friday:
+                    </span>
                     <span className="font-medium">9:00 AM - 6:00 PM</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-slate-700 dark:text-slate-300">Saturday:</span>
+                    <span className="text-slate-700 dark:text-slate-300">
+                      Saturday:
+                    </span>
                     <span className="font-medium">10:00 AM - 4:00 PM</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-slate-700 dark:text-slate-300">Sunday:</span>
+                    <span className="text-slate-700 dark:text-slate-300">
+                      Sunday:
+                    </span>
                     <span className="font-medium">Closed</span>
                   </li>
                 </ul>
@@ -129,7 +150,9 @@ export default function ContactPage() {
             <div>
               <Card className="border border-slate-200 dark:border-slate-800">
                 <CardContent className="p-8">
-                  <h2 className="font-heading text-2xl font-bold mb-6">Send Us a Message</h2>
+                  <h2 className="font-heading text-2xl font-bold mb-6">
+                    Send Us a Message
+                  </h2>
 
                   {isSubmitted ? (
                     <motion.div
@@ -138,7 +161,9 @@ export default function ContactPage() {
                       className="bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 p-4 rounded-lg flex items-center mb-6"
                     >
                       <CheckCircle className="h-5 w-5 mr-2 shrink-0" />
-                      <p>Thank you for your message! We'll get back to you soon.</p>
+                      <p>
+                        Thank you for your message! We'll get back to you soon.
+                      </p>
                     </motion.div>
                   ) : null}
 
@@ -244,11 +269,13 @@ export default function ContactPage() {
           <div className="bg-slate-200 dark:bg-slate-800 h-96 rounded-lg overflow-hidden">
             {/* Placeholder for map */}
             <div className="w-full h-full flex items-center justify-center">
-              <p className="text-slate-700 dark:text-slate-300">Map of Hunza, Pakistan would be displayed here</p>
+              <p className="text-slate-700 dark:text-slate-300">
+                Map of Hunza, Pakistan would be displayed here
+              </p>
             </div>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
