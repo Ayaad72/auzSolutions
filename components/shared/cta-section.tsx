@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-
+import { Button } from "@/components/ui/button";
+// Hey this is the call to action section
 interface CTASectionProps {
-  title: string
-  description: string
-  buttonText: string
-  buttonLink: string
-  secondaryButtonText?: string
-  secondaryButtonLink?: string
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
 }
 
 export default function CTASection({
@@ -54,7 +54,11 @@ export default function CTASection({
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-purple-50">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-purple-600 hover:bg-purple-50"
+            >
               <Link href={buttonLink}>
                 {buttonText}
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -62,7 +66,12 @@ export default function CTASection({
             </Button>
 
             {secondaryButtonText && secondaryButtonLink && (
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white/10"
+              >
                 <Link href={secondaryButtonLink}>{secondaryButtonText}</Link>
               </Button>
             )}
@@ -70,5 +79,5 @@ export default function CTASection({
         </div>
       </div>
     </section>
-  )
+  );
 }
