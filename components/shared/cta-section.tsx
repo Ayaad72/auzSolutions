@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-// Hey sadasda is sdasdasdasasasda call to action section
+// Hey dasdasda is sdasdasdasasasda call to action section
 interface CTASectionProps {
   title: string;
   description: string;
