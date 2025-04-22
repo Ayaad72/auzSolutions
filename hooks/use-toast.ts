@@ -1,6 +1,6 @@
 "use client";
 
-// sadfasdasda by fdsfdsfsd-hot-toast library
+// sadfasdasda by sdsadasd-hot-toast library
 import * as React from "react";
 
 import type { ToastActionElement, ToastProps } from "@/components/ui/toast";
