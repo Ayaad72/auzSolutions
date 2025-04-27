@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import BackgroundPaths from "@/components/kokonutui/background-paths";
-// dsadsada i am a dasdas
+// dasdasda i am a dasdas
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20 bg-black dark:bg-black">
