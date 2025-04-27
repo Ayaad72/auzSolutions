@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import BackgroundPaths from "@/components/kokonutui/background-paths"
-
+import { Button } from "@/components/ui/button";
+import BackgroundPaths from "@/components/kokonutui/background-paths";
+// hello i am a commentr
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20 bg-black dark:bg-black">
@@ -40,8 +40,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
           >
-            With a powerhouse team of designers, developers, and strategists, we deliver high-impact web design, graphic
-            design, and UI/UX solutions tailored for startups, small businesses, and global brands.
+            With a powerhouse team of designers, developers, and strategists, we
+            deliver high-impact web design, graphic design, and UI/UX solutions
+            tailored for startups, small businesses, and global brands.
           </motion.p>
 
           <motion.div
@@ -60,12 +61,17 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-white border-white/20 hover:bg-white/10">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-white border-white/20 hover:bg-white/10"
+            >
               <Link href="/portfolio">View Our Work</Link>
             </Button>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
