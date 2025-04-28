@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const categories = ["All", "Web Design", "Mobile Apps", "Branding"]
-
+const categories = ["All", "Web Design", "Mobile Apps", "Branding"];
+// sadasda
 const projects = [
   {
     id: 1,
@@ -55,21 +55,26 @@ const projects = [
     image: "/placeholder.svg?height=600&width=800",
     link: "/portfolio/delivery-app",
   },
-]
+];
 
 export default function FeaturedWorks() {
-  const [activeCategory, setActiveCategory] = useState("All")
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
-    activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
+    activeCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
 
   return (
     <section className="py-20 bg-black dark:bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Our Featured Works</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">
+            Our Featured Works
+          </h2>
           <p className="text-slate-400 dark:text-slate-400 max-w-2xl mx-auto">
-            Explore our portfolio of successful projects that showcase our expertise and creativity.
+            Explore our portfolio of successful projects that showcase our
+            expertise and creativity.
           </p>
         </div>
 
@@ -90,7 +95,10 @@ export default function FeaturedWorks() {
           </div>
 
           <TabsContent value={activeCategory} className="mt-0">
-            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div
+              layout
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
               {filteredProjects.map((project) => (
                 <motion.div
                   key={project.id}
@@ -112,8 +120,12 @@ export default function FeaturedWorks() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                           <div>
-                            <h3 className="text-white text-xl font-semibold mb-2">{project.title}</h3>
-                            <p className="text-white/80 text-sm">{project.category}</p>
+                            <h3 className="text-white text-xl font-semibold mb-2">
+                              {project.title}
+                            </h3>
+                            <p className="text-white/80 text-sm">
+                              {project.category}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -139,5 +151,5 @@ export default function FeaturedWorks() {
         </div>
       </div>
     </section>
-  )
+  );
 }
