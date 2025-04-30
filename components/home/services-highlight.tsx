@@ -1,28 +1,44 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { Globe, Code, Palette, Smartphone, PenTool, Database } from "lucide-react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  Globe,
+  Code,
+  Palette,
+  Smartphone,
+  PenTool,
+  Database,
+} from "lucide-react";
 
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
     title: "Web & Mobile Design",
-    description: "User-centered interfaces that engage and convert visitors into customers.",
+    description:
+      "User-centered interfaces that engage and convert visitors into customers.",
     icon: Globe,
     link: "/services#web-design",
   },
   {
     title: "Web Development",
-    description: "Custom websites and applications built with the latest technologies.",
+    description:
+      "Custom websites and applications built with the latest technologies.",
     icon: Code,
     link: "/services#web-development",
   },
   {
     title: "Graphic & Editorial Design",
-    description: "Visual assets that communicate your brand message effectively.",
+    description:
+      "Visual assets that communicate your brand message effectively.",
     icon: Palette,
     link: "/services#graphic-design",
   },
@@ -34,7 +50,8 @@ const services = [
   },
   {
     title: "Mobile Development",
-    description: "Native and cross-platform mobile applications for iOS and Android.",
+    description:
+      "Native and cross-platform mobile applications for iOS and Android.",
     icon: Smartphone,
     link: "/services#mobile-development",
   },
@@ -44,7 +61,7 @@ const services = [
     icon: Database,
     link: "/services#software-development",
   },
-]
+];
 
 const container = {
   hidden: { opacity: 0 },
@@ -54,21 +71,24 @@ const container = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-}
-
+};
+// dsfdd
 export default function ServicesHighlight() {
   return (
     <section className="py-20 bg-black dark:bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Our Services</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">
+            Our Services
+          </h2>
           <p className="text-slate-400 dark:text-slate-400 max-w-2xl mx-auto">
-            We offer a comprehensive range of digital services to help your business thrive in the digital landscape.
+            We offer a comprehensive range of digital services to help your
+            business thrive in the digital landscape.
           </p>
         </div>
 
@@ -86,8 +106,12 @@ export default function ServicesHighlight() {
                   <div className="w-12 h-12 rounded-lg bg-purple-900/30 dark:bg-purple-900/30 flex items-center justify-center mb-4">
                     <service.icon className="h-6 w-6 text-purple-400 dark:text-purple-400" />
                   </div>
-                  <CardTitle className="text-xl text-white">{service.title}</CardTitle>
-                  <CardDescription className="text-slate-400">{service.description}</CardDescription>
+                  <CardTitle className="text-xl text-white">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-slate-400">
+                    {service.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardFooter>
                   <Button
@@ -107,11 +131,16 @@ export default function ServicesHighlight() {
         </motion.div>
 
         <div className="text-center mt-12">
-          <Button asChild variant="outline" size="lg" className="text-white border-white/20 hover:bg-white/10">
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="text-white border-white/20 hover:bg-white/10"
+          >
             <Link href="/services">View All Services</Link>
           </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }
