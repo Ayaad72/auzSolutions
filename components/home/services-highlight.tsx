@@ -19,7 +19,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-// gfdfgdfgdf i am a comment
+// fsdfsdf i am a comment
 const services = [
   {
     title: "Web & Mobile Design",
