@@ -77,7 +77,7 @@ const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
-// dasdsadadadas
+// dsadsadasd
 export default function ServicesHighlight() {
   return (
     <section className="py-20 bg-black dark:bg-black">
