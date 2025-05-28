@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     "A powerhouse team of designers, developers, and strategists delivering high-impact web design, graphic design, and UI/UX solutions.",
   generator: "v0.dev",
 };
-// testing for git 
 export default function RootLayout({
   children,
 }: Readonly<{
